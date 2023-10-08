@@ -6,6 +6,7 @@ public class DotComTester {
     public static void main(String[]args){
 
         DotCom dot = new DotCom();
+        GameHelper helper = new GameHelper();
 
         int random = (int)(Math.random()*6);
         int[] locations = {random, random+1, random+2};
@@ -21,8 +22,11 @@ public class DotComTester {
         }
 
         while (dot.isAlive) {
-            String userGuess = askForInput();
+
+            String userGuess = helper.getUserInput("new number please");
             String result = dot.checkYourSelf(userGuess);
+
+            numOfGuesses++;
             if (result.equals("kill")){
                 dot.isAlive = false;
             }
@@ -36,7 +40,7 @@ public class DotComTester {
         }
     }
 
-    public static String askForInput(){
+   /* public static String askForInput(){
 
         System.out.println("Enter your guess number");
         Scanner sc = new Scanner(System.in);
@@ -48,5 +52,5 @@ public class DotComTester {
         }
         numOfGuesses++;
         return guessNum;
-    }
+    }*/
 }
