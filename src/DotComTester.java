@@ -40,17 +40,4 @@ public class DotComTester {
         }
     }
 
-   /* public static String askForInput(){
-
-        System.out.println("Enter your guess number");
-        Scanner sc = new Scanner(System.in);
-        String guessNum = sc.nextLine();
-
-        if (guessNum.length()>1){
-            System.out.println("Only one number is allowed!!");
-            numOfGuesses--;
-        }
-        numOfGuesses++;
-        return guessNum;
-    }*/
 }
