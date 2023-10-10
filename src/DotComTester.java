@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class DotComTester {
 
     public static int numOfGuesses = 0;
@@ -11,14 +9,9 @@ public class DotComTester {
         int random = (int)(Math.random()*6);
         int[] locations = {random, random+1, random+2};
 
-        /*for(int i=0 ; i<3 ; i++){
-            locations[i] = random;
-            x++;
-        }*/
-
         dot.setLocationCells(locations);
         for (int a: locations){
-            System.out.println(a);
+            System.out.println(a); //cheat delete later
         }
 
         while (dot.isAlive) {
@@ -27,6 +20,7 @@ public class DotComTester {
             String result = dot.checkYourSelf(userGuess);
 
             numOfGuesses++;
+            System.out.println(numOfGuesses);
             if (result.equals("kill")){
                 dot.isAlive = false;
             }
@@ -34,10 +28,8 @@ public class DotComTester {
                 System.out.println("Number of guesses "+numOfGuesses);
                 System.out.println("Game Over!!");
                 dot.isAlive = false;
-            }else{
-
             }
         }
     }
-
 }
+

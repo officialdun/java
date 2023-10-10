@@ -7,57 +7,34 @@ public class DotCom {
     int numOfHits = 0;
     DotComTester tester = new DotComTester();
     Boolean isAlive = true;
-    int[] hits = new int[3];
-
-    List<Integer> newSet = new ArrayList<>();
-
-   /* int startingPoint = (int)(Math.random()*5);*/
+    List<String> newSet = new ArrayList<>();
 
     String checkYourSelf(String userGuesses) {
         int Guess = Integer.parseInt(userGuesses);
         String result = "miss";
 
-
-        int ch = 0;
-
-        for (int cell : locationsCells) {
-            if (Guess == cell) {
+        for (String cell : newSet) {
+            if (String.valueOf(Guess).equals(cell)) {
                 result = "hit";
-
-               // locationsCells[ch] = -1;
-
-
-
-                
-
+                newSet.remove(String.valueOf(Guess));
 
                 numOfHits++;
                 break;
             }
-
-
-            ch++;
-
         }
 
-        if (numOfHits == locationsCells.length) {
+        if (newSet.isEmpty()) {
             result = "kill";
 
-            for (int g: hits){
-                System.out.print(g+" ");
-            }
             System.out.println();
-
             System.out.println("You took "+tester.numOfGuesses+" guesses");
         }
         System.out.println(result);
 
-
         return result;
     }
-
     public void setLocationCells(int[] locs) {
         locationsCells = locs;
-
+        for(int arr: locationsCells) newSet.add(String.valueOf(arr));
     }
 }
