@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class DotCom {
 
     int[] locationsCells;
@@ -5,6 +8,8 @@ public class DotCom {
     DotComTester tester = new DotComTester();
     Boolean isAlive = true;
     int[] hits = new int[3];
+
+    List<Integer> newSet = new ArrayList<>();
 
    /* int startingPoint = (int)(Math.random()*5);*/
 
@@ -19,22 +24,19 @@ public class DotCom {
             if (Guess == cell) {
                 result = "hit";
 
+               // locationsCells[ch] = -1;
 
-                /*for (int g: hits){
-                    if(Guess==g){
-                       // break;
-                    }else{
-                        hits[numOfHits] = Guess;
-                    }
-                }*/
 
-               // locationsCells
+
+                
+
+
                 numOfHits++;
                 break;
             }
 
 
-
+            ch++;
 
         }
 
