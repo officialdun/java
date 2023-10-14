@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.ArrayList;
+
 public class GameHelper {
     public String getUserInput(String prompt) {
         String inputLine = null;
@@ -12,5 +14,10 @@ public class GameHelper {
             System.out.println("IOException: " + e);
         }
         return inputLine;
+    }
+
+    public ArrayList<String> placeDotCom(int i) {
+
+        return null;
     }
 }

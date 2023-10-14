@@ -1,6 +1,8 @@
+/*
 public class DotComTester {
 
     public static int numOfGuesses = 0;
+    //ArrayList<String>
     public static void main(String[]args){
 
         DotCom dot = new DotCom();
@@ -33,3 +35,4 @@ public class DotComTester {
     }
 }
 
+*/
